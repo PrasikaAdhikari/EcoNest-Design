@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Portfolio thumbnails */
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .portfolio img {
+            width: 350px;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .portfolio img:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            /* shorthand for top:0, right:0, bottom:0, left:0 */
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 12px;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 35px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" class="logo-link">
+                        <img src="Assets/logo2.png" alt="logo of the company">
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="pheading" style="text-align: center">Our Works</h1>
+
+        <section class="portfolio">
+            <a href="#img1"><img src="Assets/beautiful-modern-plants-deco.jpg" alt="Modern plant decor"></a>
+            <a href="#img2"><img src="Assets/indoor-oasis-sunlit-dining-with-lush-greenery.jpg" alt="Indoor oasis"></a>
+
+            <a href="#img3"><img src="Assets/beautiful-modern-plants-deco.jpg" alt="Modern plant decor"></a>
+            <a href="#img4"><img src="Assets/indoor-oasis-sunlit-dining-with-lush-greenery.jpg" alt="Indoor oasis"></a>
+            <a href="#img5"><img src="Assets/side-view-man-working-project.jpg" alt="Man working on project"></a>
+            <a href="#img6"><img src="Assets/services.jpg" alt="Service showcase"></a>
+            <a href="#img7"><img src="Assets/side-view-man-working-project.jpg" alt="Man working on project"></a>
+            <a href="#img8"><img src="Assets/services.jpg" alt="Service showcase"></a>
+        </section>
+
+        <!-- Lightbox Enlarged Images -->
+        <aside id="img1" class="lightbox">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="Assets/beautiful-modern-plants-deco.jpg" alt="Modern plant decor enlarged">
+        </aside>
+
+        <aside id="img2" class="lightbox">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="Assets/indoor-oasis-sunlit-dining-with-lush-greenery.jpg" alt="Indoor oasis enlarged">
+        </aside>
+
+        <aside id="img3" class="lightbox">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="Assets/beautiful-modern-plants-deco.jpg" alt="Project work enlarged">
+        </aside>
+
+        <aside id="img4" class="lightbox">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="Assets/indoor-oasis-sunlit-dining-with-lush-greenery.jpg" alt="Service showcase enlarged">
+        </aside>
+
+        <aside id="img5" class="lightbox">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="Assets/side-view-man-working-project.jpg" alt="Service showcase enlarged">
+        </aside>
+        <aside id="img6" class="lightbox">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="Assets/services.jpg" alt="Service showcase enlarged">
+        </aside>
+        <aside id="img7" class="lightbox">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="Assets/side-view-man-working-project.jpg" alt="Service showcase enlarged">
+        </aside>
+        <aside id="img8" class="lightbox">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="Assets/services.jpg" alt="Service showcase enlarged">
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Prasika Adhikari</p>
+        <span>Made by Prasika Adhikari :)</span>
+    </footer>
+</body>
+
+</html>
